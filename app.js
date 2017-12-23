@@ -4,7 +4,7 @@ var events = require('events');
 
 var emitter = new events.EventEmitter();
 var server = http.createServer(function (request, response) {
-    response.writeHead('200', {'Content-Type': 'text/json'});
+    response.writeHead('200', {'Content-Type': 'text/plain'});
     emitter.emit('wish', "Merry Christmas");
     response.end("Merry Christmas!!!");
 });
